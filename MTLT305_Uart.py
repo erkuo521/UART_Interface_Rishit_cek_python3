@@ -119,9 +119,9 @@ class UART_Dev:
         packet.extend(list(bytearray(message_type.encode())))
 
         # form packet to send
-        if(message_type == "WF" or message_type == "SF"):
+        if(message_type == "WF" or message_type == "SF"): 
             msg_len = 1 + len(message)
-            no_of_fields = int(len(message)/4)
+            no_of_fields = int(len(message)/4) 
             packet.append(msg_len)
             packet.append(no_of_fields)
             final_packet = packet + message
