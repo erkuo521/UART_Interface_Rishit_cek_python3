@@ -310,7 +310,7 @@ class Test_Scripts:
         if (type(data) != list):
             return False, 'Command Worked', "Negative Response"
 
-        if( int(data[0].hex(),16) == int(null,16)):
+        if( int(bytes(data[0], encoding='utf8').hex(),16) == int(null,16)):
             return True, int(data[0].hex(),16), int(null,16)
         else:
             #data = Test_Scripts.uut.sensor_command("GF", field)
