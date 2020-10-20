@@ -128,7 +128,7 @@ class UART_Dev:
             #print packet
         elif(message_type == "GF" or message_type == "RF"):
             msg_len = 1 + len(message)
-            no_of_fields = len(message)/2
+            no_of_fields = int(len(message)/2)
             packet.append(msg_len)
             packet.append(no_of_fields)
             final_packet = packet + message
