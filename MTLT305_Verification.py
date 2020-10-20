@@ -26,7 +26,7 @@ if __name__ == "__main__":
     print("\r\n \t# UUT Version: ", version)
 
     print("\r\n \t##########  Setting up tests...  ##########################\r\n")
-    input('12')
+    # input('12')
     uut.silence_device()
 
     env = Test_Environment(uut)

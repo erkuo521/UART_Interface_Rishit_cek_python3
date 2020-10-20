@@ -311,10 +311,10 @@ class Test_Scripts:
             return False, 'Command Worked', "Negative Response"
 
         if( int(bytes(data[0], encoding='utf8').hex(),16) == int(null,16)):
-            return True, int(data[0].hex(),16), int(null,16)
+            return True, int(bytes(data[0], encoding='utf8').hex(),16), int(null,16)
         else:
             #data = Test_Scripts.uut.sensor_command("GF", field)
-            return False, int(data[0].hex(),16), int(null,16)
+            return False, int(bytes(data[0], encoding='utf8').hex(),16), int(null,16)
 
 
     def read_only_test(self, field, val):
@@ -613,7 +613,7 @@ class Test_Environment:
 
     def run_tests(self):
         for section in self.test_sections:
-            section.run_test_section()
+            section.run_test_section() 
 
     def print_results(self):
         print("\tTest Results::")

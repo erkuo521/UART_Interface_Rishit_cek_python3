@@ -18,8 +18,8 @@ class Test_Section:
         print("\t" + str(self.section_id) + ". " + self.section_name + "\r\n")
         counter = 0
         for test in self.test_cases:
-            if test.test_id == 'Continuous Mode Test':
-                print('567')
+            # if counter == 25:
+            #     print('567')
             #self.result = test.run()
             counter = counter + 1
             id = str(self.section_id) + "." + str(counter) + ". "
