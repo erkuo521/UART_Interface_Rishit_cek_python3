@@ -134,7 +134,7 @@ class UART_Dev:
             final_packet = packet + message
         else:
             msg_len = len(message)
-            packet.append(msg_len)
+            packet.append(msg_len) 
             final_packet = packet + message
             #print final_packet
 
